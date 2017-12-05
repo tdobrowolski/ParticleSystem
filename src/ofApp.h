@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "Sparkle.hpp"
 
+#define NSPARKLES 10
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -23,6 +25,10 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    Sparkle mySparkle;
+    //Sparkle groupOfSparkles[NSPARKLES];
+    
+    vector <Sparkle> groupOfSparkles;
+    
+    ofLight spotlight;
 		
 };

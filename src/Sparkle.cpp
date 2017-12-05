@@ -10,27 +10,31 @@
 Sparkle::Sparkle() {
 }
     
-    void Sparkle::setup() {
+    void Sparkle::setup(float _x, float _y, float _z, int _dim) {
         
-        x = ofRandom(0, ofGetWidth());
-        y = ofRandom(0, ofGetHeight());
-        z = ofRandom(0, 300);
+        x = _x;
+        y = _y;
+        z = _z;
+        
+        //x = ofRandom(0, ofGetWidth());
+        //y = ofRandom(0, ofGetHeight());
+        //z = ofRandom(0, 300);
         
         speedX = ofRandom(-1, 1);
         speedY = ofRandom(-1, 1);
         speedZ = ofRandom(-1, 1);
         
-        dim = 50;
+        dim = _dim;
         
-        color.set(ofRandom(255), ofRandom(255), ofRandom(255));
+        color.set(255, ofRandom(255), 0);
         
     }
     
     void Sparkle::update() {
         
-        x+=speedX;
-        y+=speedY;
-        z+=speedZ;
+        x += speedX;
+        y += speedY;
+        z += speedZ;
         
     }
     
