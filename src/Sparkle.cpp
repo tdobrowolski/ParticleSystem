@@ -20,11 +20,15 @@ Sparkle::Sparkle() {
         //y = ofRandom(0, ofGetHeight());
         //z = ofRandom(0, 300);
         
-        speedX = ofRandom(-1, 1);
-        speedY = ofRandom(-1, 1);
-        speedZ = ofRandom(-1, 1);
+        //speedX = ofRandom(-1, 1);
+        //speedY = ofRandom(-1, 1);
+        //speedZ = ofRandom(-1, 1);
         
-        dim = _dim;
+        speedX = 10;
+        speedY = -10;
+        speedZ = 10;
+        
+        dim = 10;
         
         color.set(255, ofRandom(255), 0);
         
