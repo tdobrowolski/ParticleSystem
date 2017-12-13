@@ -25,7 +25,7 @@ public:
     float speedY;
     float speedZ;
     int dim;
-    ofColor color;
+    ofColor sparkleColor;
     
     Sparkle(); // konstruktor
     

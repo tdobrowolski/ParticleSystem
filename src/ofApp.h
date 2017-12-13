@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Sparkle.hpp"
+#include "Stick.hpp"
 
 #define NSPARKLES 10
 
@@ -28,6 +29,8 @@ class ofApp : public ofBaseApp{
     //Sparkle groupOfSparkles[NSPARKLES];
     
     vector <Sparkle> groupOfSparkles;
+    
+    Stick mainStick;
     
     ofLight spotlight;
 		

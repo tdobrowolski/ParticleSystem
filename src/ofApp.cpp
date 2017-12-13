@@ -12,6 +12,9 @@ void ofApp::setup(){
     ofSetSphereResolution(100);
     spotlight.enable();
     
+    //Stick mainStick;
+    mainStick.setup(500);
+    
     for(int i = 0; i < groupOfSparkles.size(); i++){
         
         //int size = (i + 1) * 10;
@@ -29,6 +32,10 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
+    Sparkle tempSparkle;
+    tempSparkle.setup(512, 284, 0, 1);
+    groupOfSparkles.push_back(tempSparkle);
+    
     for(int i = 0; i < groupOfSparkles.size(); i++){
         
         groupOfSparkles[i].update();
@@ -45,6 +52,8 @@ void ofApp::draw(){
         groupOfSparkles[i].draw();
         
     }
+    
+    mainStick.draw();
     
     // rysowanie tekstu
     ofDrawBitmapString("Tobiasz Dobrowolski", 840, 733);
@@ -68,17 +77,13 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    
-    Sparkle tempSparkle;
-    tempSparkle.setup(x, y, ofRandom(0, 100), ofRandom(10, 40));
-    groupOfSparkles.push_back(tempSparkle);
 
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
     
-    for (int i = 0; i < groupOfSparkles.size(); i++) {
+    /*for (int i = 0; i < groupOfSparkles.size(); i++) {
         
         float distance = ofDist(x, y, groupOfSparkles[i].x, groupOfSparkles[i].y);
         
@@ -88,7 +93,11 @@ void ofApp::mousePressed(int x, int y, int button){
             
         }
         
-    }
+    }*/
+    
+    /*Sparkle tempSparkle;
+    tempSparkle.setup(x, y, ofRandom(0, 100), ofRandom(10, 40));
+    groupOfSparkles.push_back(tempSparkle);*/
 
 }
 
