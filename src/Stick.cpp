@@ -14,7 +14,7 @@ void Stick::setup(int _length) {
     
     length = _length;
     
-    stickColor.set(192, 192, 192);
+    stickColor.set(105, 105, 105);
     
 }
 

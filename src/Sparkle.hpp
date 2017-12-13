@@ -25,6 +25,7 @@ public:
     float speedY;
     float speedZ;
     int dim;
+    int deathPoint;
     ofColor sparkleColor;
     
     Sparkle(); // konstruktor

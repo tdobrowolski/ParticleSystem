@@ -5,11 +5,12 @@ void ofApp::setup(){
     
     //ofEnableAlphaBlending();
     ofEnableSmoothing();
-    ofSetGlobalAmbientColor(ofColor(255, 130, 0));
+    ofSetGlobalAmbientColor(ofColor(255, 255, 255));
     ofSetSmoothLighting(true);
     glEnable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
     ofSetSphereResolution(100);
+    ofSetBackgroundColor(0, 0, 0);
     spotlight.enable();
     
     //Stick mainStick;
@@ -36,9 +37,23 @@ void ofApp::update(){
     tempSparkle.setup(512, 284, 0, 1);
     groupOfSparkles.push_back(tempSparkle);
     
+    Sparkle tempSparkle1;
+    tempSparkle1.setup(512, 284, 0, 1);
+    groupOfSparkles.push_back(tempSparkle1);
+    
+    Sparkle tempSparkle2;
+    tempSparkle2.setup(512, 284, 0, 1);
+    groupOfSparkles.push_back(tempSparkle2);
+    
     for(int i = 0; i < groupOfSparkles.size(); i++){
         
         groupOfSparkles[i].update();
+        
+        if (groupOfSparkles[i].deathPoint > 20) {
+            
+             groupOfSparkles.erase(groupOfSparkles.begin()+i);
+            
+        }
         
     }
 

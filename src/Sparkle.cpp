@@ -15,6 +15,7 @@ Sparkle::Sparkle() {
         x = _x;
         y = _y;
         z = _z;
+        deathPoint = 0;
         
         //x = ofRandom(0, ofGetWidth());
         //y = ofRandom(0, ofGetHeight());
@@ -35,6 +36,8 @@ Sparkle::Sparkle() {
         x += speedX;
         y += speedY;
         z += speedZ;
+        
+        deathPoint += 1;
         
     }
     
