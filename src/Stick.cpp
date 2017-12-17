@@ -10,13 +10,13 @@
 Stick::Stick() {
 }
 
-void Stick::setup(int _color) {
+void Stick::setup(int _code) {
     
-    color = _color;
+    code = _code;
     
     length_points = 0;
     
-    switch(color) {
+    switch(code) {
         case 0:
             y_stick = 659; // constant
             stickColor.set(30, 30, 30);
@@ -45,7 +45,7 @@ void Stick::update() {
         
         length_points += 1;
         
-        switch(color) {
+        switch(code) {
             case 0:
                 break;
             case 1:
@@ -65,7 +65,7 @@ void Stick::update() {
 void Stick::draw() {
     
     ofSetColor(stickColor);
-    ofDrawCylinder(512, y_stick, 0, 2, length); //534
+    ofDrawCylinder(512, y_stick, 0, 2, length);
     
 }
 

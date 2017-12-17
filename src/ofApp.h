@@ -26,14 +26,16 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    //Sparkle groupOfSparkles[NSPARKLES];
+    float y_spark;
     
     vector <Sparkle> groupOfSparkles;
-    
+        
     Stick mainStick;
     Stick beforeStick;
     Stick afterStick;
     
     ofLight spotlight;
+    
+    ofSoundPlayer mySound;
 		
 };

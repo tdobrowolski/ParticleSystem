@@ -22,7 +22,7 @@ public:
     float y_stick;
     float z_stick;
     float length;
-    int color;
+    int code;
     
     int length_points;
     

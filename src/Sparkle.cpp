@@ -17,17 +17,13 @@ Sparkle::Sparkle() {
         z = _z;
         deathPoint = 0;
         
-        //x = ofRandom(0, ofGetWidth());
-        //y = ofRandom(0, ofGetHeight());
-        //z = ofRandom(0, 300);
-        
         speedX = ofRandom(-10, 10);
         speedY = ofRandom(-10, 10);
         speedZ = ofRandom(-10, 10);
         
         dim = 3;
         
-        sparkleColor.set(255, ofRandom(255), 0);
+        sparkleColor.set(255, ofRandom(221, 255), ofRandom(100, 255));
         
     }
     
