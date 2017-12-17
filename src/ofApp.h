@@ -31,6 +31,8 @@ class ofApp : public ofBaseApp{
     vector <Sparkle> groupOfSparkles;
     
     Stick mainStick;
+    Stick beforeStick;
+    Stick afterStick;
     
     ofLight spotlight;
 		

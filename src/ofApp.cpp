@@ -9,12 +9,13 @@ void ofApp::setup(){
     ofSetSmoothLighting(true);
     glEnable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
-    ofSetSphereResolution(100);
+    //ofSetSphereResolution(100);
     ofSetBackgroundColor(0, 0, 0);
     spotlight.enable();
     
-    //Stick mainStick;
-    mainStick.setup(500);
+    mainStick.setup(0);
+    beforeStick.setup(1);
+    afterStick.setup(2);
     
     for(int i = 0; i < groupOfSparkles.size(); i++){
         
@@ -33,6 +34,10 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
+    mainStick.update();
+    beforeStick.update();
+    afterStick.update();
+
     Sparkle tempSparkle;
     tempSparkle.setup(512, 284, 0, 1);
     groupOfSparkles.push_back(tempSparkle);
@@ -69,6 +74,8 @@ void ofApp::draw(){
     }
     
     mainStick.draw();
+    beforeStick.draw();
+    afterStick.draw();
     
     // rysowanie tekstu
     ofDrawBitmapString("Tobiasz Dobrowolski", 840, 733);

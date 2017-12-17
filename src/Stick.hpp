@@ -14,14 +14,17 @@ class Stick {
     
 public:
     
-    void setup(int _length);
+    void setup(int _color);
     void update();
     void draw();
     
-    int x_stick;
-    int y_stick;
-    int z_stick;
-    int length;
+    float x_stick;
+    float y_stick;
+    float z_stick;
+    float length;
+    int color;
+    
+    int length_points;
     
     ofColor stickColor;
     
