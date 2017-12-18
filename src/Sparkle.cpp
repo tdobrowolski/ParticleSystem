@@ -10,7 +10,7 @@
 Sparkle::Sparkle() {
 }
     
-    void Sparkle::setup(float _x, float _y, float _z, int _dim) {
+    void Sparkle::setup(float _x, float _y, float _z) {
         
         x = _x;
         y = _y;
@@ -21,7 +21,7 @@ Sparkle::Sparkle() {
         speedY = ofRandom(-10, 10);
         speedZ = ofRandom(-10, 10);
         
-        dim = 3;
+        dim = 2;
         
         sparkleColor.set(255, ofRandom(221, 255), ofRandom(100, 255));
         

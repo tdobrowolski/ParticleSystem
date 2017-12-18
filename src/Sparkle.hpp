@@ -14,7 +14,7 @@ class Sparkle {
     
 public:
     
-    void setup(float _x, float _y, float _z, int _dim);
+    void setup(float _x, float _y, float _z);
     void update();
     void draw();
     

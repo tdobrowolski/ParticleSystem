@@ -34,15 +34,15 @@ void ofApp::update(){
         y_spark += 0.3;
 
         Sparkle tempSparkle;
-        tempSparkle.setup(512, y_spark, 0, 1);
+        tempSparkle.setup(512, y_spark, 0);
         groupOfSparkles.push_back(tempSparkle);
         
         Sparkle tempSparkle1;
-        tempSparkle1.setup(512, y_spark, 0, 1);
+        tempSparkle1.setup(512, y_spark, 0);
         groupOfSparkles.push_back(tempSparkle1);
         
         Sparkle tempSparkle2;
-        tempSparkle2.setup(512, y_spark, 0, 1);
+        tempSparkle2.setup(512, y_spark, 0);
         groupOfSparkles.push_back(tempSparkle2);
         
     }
